@@ -1,0 +1,54 @@
+ <html>
+   <head>
+       <title> BMI calculator</title>
+   </head>
+     
+     <body>
+         <label for ="heighti"> Please enter your height in inches:</label>
+         <input type ="text" id="heighti" min="0" max="20"/><br>
+         
+         <label for ="weighti"> Please enter your weight in pounds:</label>
+          <input type="text" id="weighti" min="0"/><br>
+         
+         <button onclick= "calculate();"> Compute BMI </button>
+         
+         <h1 id="BMI"></h1>
+         
+         <h1 id="message"></h1>
+         
+         
+         
+     <script>
+         calculate = function(){
+             var height,weight;
+             
+             height= document.querySelector("#heighti").value;
+             weight= document.querySelector("#weighti").value;
+             
+             BMIcalculator= (weight /(height * height))* 703;
+             
+             h1= document.querySelector("#BMI");
+             h1.innerHTML="Your BMI is:"+BMIcalculator;
+            
+             if (BMIcalculator < 18.5){
+                 H1=document.querySelector("#message");
+             H1.innerHTML="You are underweight, I recommand you to see a doctor or eat more :)";
+             }
+             else if(BMIcalculator < 24.9){
+                 H1=document.querySelector("#message");
+                 H1.innerHTML="I envy you, keep the good work";
+             }
+             else if(BMIcalculator < 29.9){
+                 H1=document.querySelector("#message");
+                 H1.innerHTML="Dude, you got see a doctor";
+             }
+             else{
+                 H1=document.querySelector("#message");
+                 H1.innerHTML="Bro, I got nothing to say. May God be with you!";
+             }
+         
+           
+       }
+     </script>
+   </body>
+ </html>
