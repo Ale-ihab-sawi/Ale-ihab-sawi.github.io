@@ -1,0 +1,55 @@
+ <html>
+   <head>
+     <title>To Do List</title>
+       <style>
+           ul {list-style: none; padding: 0; margin:0; width:600px;}
+           li {border:1px solid#CCC; background:#DDD; padding: 5px 10px; color: #000;}
+           li span {padding-left: 5px;}
+       </style>
+   </head>
+   <body>
+       <h1> To Do List </h1>
+       <p><input type= "text" id="inItem"/> <button id="buttonAdd">New Item</button></p>
+       <ul id="todoList">
+       </ul>
+       <script src="todo.js"> </script>
+ 
+   <script> 
+       function updateItems(){
+           item.style.textdecoration = "line-through";
+       }
+       
+        function addNewItem(list, item) {
+          var listItem= document.createElement("li");
+          var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.onclick = updateItems;
+            
+            var span = document.createElement("span");
+            span.innerText= item;
+
+         listItem.appendChild(checkbox);
+         listItem.appendChild(span);
+         list.appendChild(listItem);
+            
+        }
+          
+            
+        var btnNew = document.getElementById("buttonAdd");
+       btnNew.onclick= function(){
+           var inItem= document.getElementById("inItem");
+           var item = inItem.value;
+           
+           if (!item || item == "" || item==" " || item=="  ") {
+               return false;
+           }
+           addNewItem(document.getElementById("todoList"), item);
+       
+           inItem.select();
+    
+
+     };      
+           
+           </script>         
+     </body>
+     </html>
