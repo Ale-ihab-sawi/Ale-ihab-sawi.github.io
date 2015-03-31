@@ -1,0 +1,87 @@
+
+<html>
+  <head>
+    <title>Electronic Address Book</title>
+    
+    <style>
+      #name,#last,#phone,#email {
+        display:block;
+      }
+      
+      table{
+        border-style:solid;
+        border-width: 5px;
+        border-color: rgb(0,0,0);
+      }
+      
+      td {
+        border-style:dotted;
+        border-width: 2px;
+        border-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> Electronic Address Book</h1>
+    <label for="name">First Name</label>
+    <input type="text" id="name">
+    <label for="last">Last Name</label>
+    <input type="text" id="last">
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone">
+    <label for="email">E-mail</label>
+    <input type="text" id="email">
+    
+    <button onclick="addentry();">Add Item</button>
+    
+    <table id="addresstable">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>E-mail</th>
+      </tr>
+    </table>
+    
+    <script>
+    addentry=function(){
+      name=document.querySelector("#name").value;
+      last=document.querySelector("#last").value;
+      phone=document.querySelector("#phone").value;
+      email=document.querySelector("#email").value;
+      
+      newrow = document.createElement("tr");
+      td1=document.createElement("td");
+      td1.innerHTML=name;
+      td1.onclick=editname;
+      td2=document.createElement("td");
+      td2.innerHTML=last;
+      td3=document.createElement("td");
+      td3.innerHTML=phone;
+      td4=document.createElement("td");
+      td4.innerHTML=email;
+      newrow.appendChild(td1);
+      newrow.appendChild(td2);
+      newrow.appendChild(td3);
+      newrow.appendChild(td4);
+      table=document.querySelector("#addresstable");
+      table.appendChild(newrow);
+      
+      document.querySelector("#name").value="";
+      document.querySelector("#last").value="";
+      document.querySelector("#phone").value="";
+      document.querySelector("#email").value="";
+      
+    }
+    
+    editfn=function(){
+      fn=document.querySelector("#name").value;
+      this.innerHTML=name;
+      
+    }
+      
+      
+    </script>
+  </body>
+
+</html>
