@@ -18,10 +18,12 @@
         border-width: 2px;
         border-color: blue;
       }
-      button {
-        border-style:none;
-        border-width: 3px;
-        border-color: gray;
+      button.ex {
+        p.ex {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 50px;
       }
     </style>
   </head>
@@ -36,7 +38,7 @@
     <label for="email">E-mail</label>
     <input type="text" id="email">
     
-    <button onclick="addentry();">Add New Contact</button>
+    <button class="ex" onclick="addentry();">Add New Contact</button>
     
     <table id="addresstable">
       <tr>
