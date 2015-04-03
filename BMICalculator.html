@@ -1,6 +1,6 @@
  <html>
    <head>
-       <title> BMI calculator</title>
+       <title> Body Mass Index calculator</title>
        <style>
           body {
   background-image: url("http://circlesurrogacy.s3.amazonaws.com/wp-content/uploads/2013/06/BMI.jpg");
@@ -20,7 +20,7 @@ h1{
      
      <body>
      <h1>BMI Calculator</h1>
-     <h4>To determine if you're at a healthy weight, enter the following information and calculate your body mass index (BMI).</h4>
+     <h4>To determine if you're at a healthy weight, enter the following information and calculate your BMI.</h4>
          <label for ="heighti"> Please enter your height in inches:</label>
          <input type ="text" id="heighti" min="0" max="2000"/><br>
          
@@ -54,15 +54,17 @@ h1{
              else if(BMIcalculator < 24.9){
      H1=document.querySelector("#message");
       H1.innerHTML="I envy you, keep the good work";
-      <img src="http://sourcecodes.pro/loader/image/0-xem-s3-xem-xemoteimage-xem-com/files/86285713/GR_misicavi-xem-jpgxemc.jpg?itemid=7291413&dom=sourcecodess"/>
             }
              else if(BMIcalculator < 29.9){
                  H1=document.querySelector("#message");
-                 H1.innerHTML="Dude, you got see a doctor";
+                 H1.innerHTML="you are overwieght, I really recommand you to see a doctor";
+                 
              }
+             
+             
              else{
                  H1=document.querySelector("#message");
-                 H1.innerHTML="Bro, I got nothing to say. May God be with you!";
+                 H1.innerHTML="you are obese. I know its hard, but the sooner you face your problems and get to see a doctor the sooner you can get healther.!";
              }
          
            
