@@ -2,7 +2,19 @@
    <head>
        <title> BMI calculator</title>
        <style>
-        https://therealarthritisashley.files.wordpress.com/2014/11/bigstock-body-mass-index-retro-poster-56846093.jpg
+          body {
+  background-image: url("https://therealarthritisashley.files.wordpress.com/2014/11/bigstock-body-mass-index-retro-poster-56846093.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 200px;
+}
+h1{
+ color:white;
+ background:blue;width:300;
+ text-decoration:dotted;
+}
+
+
        </style>
    </head>
      
@@ -10,7 +22,7 @@
      <h1>BMI Calculator</h1>
      <h4>To determine if you're at a healthy weight, enter the following information and calculate your body mass index (BMI).</h4>
          <label for ="heighti"> Please enter your height in inches:</label>
-         <input type ="text" id="heighti" min="0" max="20"/><br>
+         <input type ="text" id="heighti" min="0" max="2000"/><br>
          
          <label for ="weighti"> Please enter your weight in pounds:</label>
           <input type="text" id="weighti" min="0"/><br>
@@ -37,12 +49,13 @@
             
              if (BMIcalculator < 18.5){
                  H1=document.querySelector("#message");
-             H1.innerHTML="You are underweight, I recommand you to see a doctor or eat more :)";
+             H1.innerHTML="You are underweight, I recommand you to see a doctor or eat more in a healthy way :)";
              }
              else if(BMIcalculator < 24.9){
-                 H1=document.querySelector("#message");
-                 H1.innerHTML="I envy you, keep the good work";
-             }
+     H1=document.querySelector("#message");
+      H1.innerHTML="I envy you, keep the good work";
+      <img src="http://sourcecodes.pro/loader/image/0-xem-s3-xem-xemoteimage-xem-com/files/86285713/GR_misicavi-xem-jpgxemc.jpg?itemid=7291413&dom=sourcecodess"/>
+            }
              else if(BMIcalculator < 29.9){
                  H1=document.querySelector("#message");
                  H1.innerHTML="Dude, you got see a doctor";
